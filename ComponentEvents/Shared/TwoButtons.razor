@@ -1,0 +1,30 @@
+﻿
+<div class="common">
+    <h6>Two buttons component</h6>
+    <div class="buttons">
+        <button class="btn btn-dark" @onclick="@(() => OnClickCallback.InvokeAsync("Button1"))">Button 1</button>
+        <button class="btn btn-dark" @onclick="@(() => OnClickCallback.InvokeAsync("Button2"))">Button 2</button>
+    </div>
+</div>
+
+<style>
+    .common {
+        border: solid 1px gray;
+        border-radius: 12px;
+        width: 280px;
+        padding: 10px;
+        background-color: cornflowerblue;
+        color: white;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+</style>
+
+@code {
+
+    [Parameter]
+    public EventCallback<string> OnClickCallback { get; set; }
+}

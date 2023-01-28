@@ -1,0 +1,16 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<TwoButtons OnClickCallback="SetEventInfo"></TwoButtons>
+
+<p>@clickedButtonInfo</p>
+
+@code{
+    string? clickedButtonInfo;
+
+    private void SetEventInfo(string buttonInfo)
+    {
+        clickedButtonInfo = $"Clicked button is:{buttonInfo}";
+    }
+}
