@@ -1,0 +1,1 @@
+Component events sample
